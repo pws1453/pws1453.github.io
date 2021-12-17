@@ -19,6 +19,7 @@ function post_About() {
 
 
 	var university = unis[r2];
+    var senduni = encodeURIComponent(university);
 
 	var number = Math.floor(1000000 + Math.random() * 9000000).toString();
 	var pnumber = zipcodes[r3] + number;
@@ -29,7 +30,7 @@ function post_About() {
 	xhr.open("POST", `http://csec380-core.csec.rit.edu:86/change_about.php`, true);
 	//Send the proper header information along with the request
 	xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-	xhr.send(`name=school&value=\"${university}\"`);
+	xhr.send(`name=school&value=${senduni}`);
 }
 
 post_About();
