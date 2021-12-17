@@ -63,7 +63,7 @@ function change_Picture(){
     eeel.src = key;
 
     var xht = new XMLHttpRequest();
-    xht.open("GET", `/change_photo.php?type=profile&url=${pictureURL}`,true);
+    xht.open("GET", `/change_photo.php?type=profile&url=${key}`,true);
     xht.send(); 
 }
 
