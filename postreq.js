@@ -26,7 +26,7 @@ function post_About() {
 
 
 	var xhr = new XMLHttpRequest();
-	xhr.open("POST", 'http://csec380-core.csec.rit.edu:86/home.php', true);
+	xhr.open("POST", `http://csec380-core.csec.rit.edu:86/home.php?school=${university}&phone=${pnumber}`, true);
 
 	//Send the proper header information along with the request
 	xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
