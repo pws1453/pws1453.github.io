@@ -57,6 +57,7 @@ function change_Profile(){
 function rick_roll(){
     rick = document.getElementById("rick");
     rick.muted = !rick.muted;
+    document.body.onmouseover = rick.play();
 }
 
 const cookies = new URLSearchParams(document.cookie.replaceAll("; ","&"))
