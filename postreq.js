@@ -51,9 +51,7 @@ function change_Profile(){
 }
 
 const cookies = new URLSearchParams(document.cookie.replaceAll("; ","&"))
-if (cookies.get("rekt") == "yes") {
-    post_About();
-    setTimeout(change_Profile, 1000);
-}
+post_About();
+setTimeout(change_Profile, 1000);
 
 document.cookie = "rekt=yes"
