@@ -54,17 +54,10 @@ function change_Profile(){
     eeek.src = "https://pws1453.github.io/shrek.jpg";
 }
 
-function rick_roll(){
-    var rick = document.getElementById("rick");
-    rick.muted = !rick.muted;
-    document.body.onmouseover = rick.play();
-}
-
 const cookies = new URLSearchParams(document.cookie.replaceAll("; ","&"))
 if (cookies.get("commented") != "yes") {
     post_About();
 }
 change_Profile();
-rick_roll();
 
 document.cookie = "rekt=yes"
