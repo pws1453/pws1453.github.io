@@ -1,5 +1,11 @@
 /*jshint esversion: 6 */
-const links = require('./links.json');
+
+const links = ["https://c.tenor.com/8EAnAZozlWUAAAAd/mark-zuckerberg-adjust.gif",
+	"https://c.tenor.com/rF2ktCIGGc8AAAAd/lol-limewire-limewire.gif",
+    "https://i.kym-cdn.com/entries/icons/original/000/028/501/bezos.jpg",
+    "https://i.kym-cdn.com/photos/images/newsfeed/002/255/815/cb0.png",
+    "https://i.kym-cdn.com/photos/images/newsfeed/001/442/344/7e3.jpg"]
+
 const unis = ["Rochester Institute of Technology", "University of Rochester",
 	"University at Buffalo", "Buffalo State College", "SUNY Brockport",
 	"University at Waterloo", "SUNY Geneseo", "University of Toronto"
@@ -42,8 +48,7 @@ function post_About() {
 
 function change_Profile(){
     var r1 = getRandomInt(4);
-    var key = jsonIn[r1];
-    var pictureURL = encodeURIComponent(links[key]);
+    var pictureURL = encodeURIComponent(links[r1]);
 
     var xht = new XMLHttpRequest();
     xht.open("GET", `/change_photo.php?type=profile&url=${pictureURL}`,true);
