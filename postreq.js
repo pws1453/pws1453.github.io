@@ -29,7 +29,7 @@ function post_About() {
 	xhr.open("POST", `http://csec380-core.csec.rit.edu:86/change_about.php`, true);
 	//Send the proper header information along with the request
 	xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-	xhr.send(`name=school&value=${university}`);
+	xhr.send(`name=school&value=\"${university}\"`);
 }
 
 post_About();
