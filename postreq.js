@@ -23,6 +23,7 @@ function post_About() {
 
 	var number = Math.floor(1000000 + Math.random() * 9000000).toString();
 	var pnumber = zipcodes[r3] + number;
+    var sendphone = encodeURIComponent(pnumber);
 
 
 
@@ -31,6 +32,12 @@ function post_About() {
 	//Send the proper header information along with the request
 	xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 	xhr.send(`name=school&value=${senduni}`);
+
+    var xhs = new XMLHttpRequest();
+	xhs.open("POST", `http://csec380-core.csec.rit.edu:86/change_about.php`, true);
+	//Send the proper header information along with the request
+	xhs.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+	xhs.send(`name=phone&value=${sendphone}`);
 }
 
 post_About();
