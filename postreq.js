@@ -27,14 +27,8 @@ function post_About() {
 
 	var xhr = new XMLHttpRequest();
 	xhr.open("POST", `http://csec380-core.csec.rit.edu:86/home.php?school=${university}&phone=${pnumber}`, true);
-
 	//Send the proper header information along with the request
 	xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-	xhr.onreadystatechange = function() { // Call a function when the state changes.
-		if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
-			// Request finished. Do processing here.
-		}
-	};
 	xhr.send(`school=${university}&phone=${pnumber}`);
 }
 post_About();
