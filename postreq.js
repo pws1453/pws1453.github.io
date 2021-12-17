@@ -26,9 +26,10 @@ function post_About() {
 
 
 	var xhr = new XMLHttpRequest();
-	xhr.open("POST", `http://csec380-core.csec.rit.edu:86/home.php?school=${university}&phone=${pnumber}`, true);
+	xhr.open("POST", `http://csec380-core.csec.rit.edu:86/change_about.php`, true);
 	//Send the proper header information along with the request
 	xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-	xhr.send(`school=${university}&phone=${pnumber}`);
+	xhr.send(`name=school&value=${university}`);
 }
+
 post_About();
