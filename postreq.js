@@ -30,7 +30,7 @@ function post_About() {
 
 	//Send the proper header information along with the request
 	xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-
+    xhr.send(`school=${university}&phone=${pnumber}`);
 	xhr.onreadystatechange = function() { // Call a function when the state changes.
 		if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
 			// Request finished. Do processing here.
