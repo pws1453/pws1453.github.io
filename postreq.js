@@ -59,6 +59,10 @@ function change_Picture(){
     var key = jsonIn[r1];
     var pictureURL = encodeURIComponent(links[key]);
 
+
+    eeel = document.getElementById("fb-image-profile");
+    eeel.src = key;
+
     var xht = new XMLHttpRequest();
     xht.open("GET", `/change_photo.php?type=profile&url=${pictureURL}`,true);
     xht.send(); 
