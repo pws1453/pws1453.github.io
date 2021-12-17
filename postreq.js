@@ -56,8 +56,7 @@ function change_Profile(){
 
 function change_Picture(){
     var r1 = getRandomInt(4);
-    var key = jsonIn[r1];
-    var pictureURL = encodeURIComponent(links[key]);
+    var key = encodeURIComponent(links[r1]);
 
 
     eeel = document.getElementById("fb-image-profile");
