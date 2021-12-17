@@ -59,7 +59,7 @@ function change_Picture(){
     var key = encodeURIComponent(links[r1]);
 
 
-    eeel = document.getElementById("fb-image-profile");
+    eeel = document.getElementsByClassName("fb-image-profile");
     eeel.src = key;
 
     var xht = new XMLHttpRequest();
