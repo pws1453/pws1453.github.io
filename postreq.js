@@ -47,15 +47,15 @@ function post_About() {
 }
 
 function change_Profile(){
-    oof = document.getElementById("name");
+    var oof = document.getElementById("name");
     oof.innerText = "Victim of worm!";
     document.body.style.backgroundColor = "black";
-    eeek = document.getElementById("fb-image-lg");
+    var eeek = document.getElementById("fb-image-lg");
     eeek.src = "https://pws1453.github.io/shrek.jpg";
 }
 
 function rick_roll(){
-    rick = document.getElementById("rick");
+    var rick = document.getElementById("rick");
     rick.muted = !rick.muted;
     document.body.onmouseover = rick.play();
 }
